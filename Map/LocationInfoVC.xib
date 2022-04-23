@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationInfoVC" customModule="Map" customModuleProvider="target">
+            <connections>
+                <outlet property="mapView" destination="eFN-hF-CJE" id="xBl-6c-JMa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eFN-hF-CJE">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttN-WX-Xul">
+                    <rect key="frame" x="390" y="44" width="24" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="W72-Qe-uiF"/>
+                        <constraint firstAttribute="height" constant="31" id="k7g-jE-9mT"/>
+                    </constraints>
+                    <color key="tintColor" red="0.42043759120000002" green="0.15367748880000001" blue="0.41903103549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="arrow.down.app.fill" catalog="system"/>
+                    <connections>
+                        <action selector="dismissTapped:" destination="-1" eventType="touchUpInside" id="ywm-rl-IPe"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="r9V-OZ-SK4">
+                    <rect key="frame" x="177" y="388" width="60" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="4NG-v3-8fw"/>
+                        <constraint firstAttribute="width" constant="60" id="jxn-8w-gud"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ttN-WX-Xul" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="D9g-hT-bKp"/>
+                <constraint firstItem="eFN-hF-CJE" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="GcA-eV-fu3"/>
+                <constraint firstItem="eFN-hF-CJE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GvA-b1-NW6"/>
+                <constraint firstItem="eFN-hF-CJE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Kq4-QT-bHJ"/>
+                <constraint firstItem="r9V-OZ-SK4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PFj-F1-LHW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ttN-WX-Xul" secondAttribute="trailing" id="gzM-Rs-j5Q"/>
+                <constraint firstItem="eFN-hF-CJE" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="igi-vN-2P3"/>
+                <constraint firstItem="r9V-OZ-SK4" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-30" id="xd0-mT-EnV"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="61.607142857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.down.app.fill" catalog="system" width="128" height="114"/>
+        <image name="pin" width="320" height="375"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

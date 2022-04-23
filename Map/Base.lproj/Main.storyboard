@@ -1,24 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MapVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapVC" customModule="Map" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="odv-9L-eRo">
+                                <rect key="frame" x="0.0" y="240.5" width="414" height="415"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szt-yc-xin">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="y29-XU-rdw"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.49865566490000002" green="0.18383302949999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Set Start Region">
+                                                    <attributes>
+                                                        <font key="NSFont" size="20" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="setStartRegion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UfL-M1-UUn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOt-Uy-iej">
+                                        <rect key="frame" x="0.0" y="95" width="414" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="blO-lD-9b4"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.49865566490000002" green="0.18383302949999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Access User Location">
+                                                    <attributes>
+                                                        <font key="NSFont" size="20" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="accessUserLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1gf-R2-Ag3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBP-o6-Yx5">
+                                        <rect key="frame" x="0.0" y="190" width="414" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Y5I-nq-bvm"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.40978700200000001" green="0.15107095200000001" blue="0.41089175439999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Search With City Name">
+                                                    <attributes>
+                                                        <font key="NSFont" size="20" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="searchWithCityName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UVh-Tz-5Se"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYH-mO-tmk">
+                                        <rect key="frame" x="0.0" y="285" width="414" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="BGO-gJ-pu4"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.40978700200000001" green="0.15107095200000001" blue="0.41089175439999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Location Information">
+                                                    <attributes>
+                                                        <font key="NSFont" size="20" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="getLocationInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JlK-5g-bqW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4s-T6-2tM">
+                                        <rect key="frame" x="0.0" y="380" width="414" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="taw-8m-CGY"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.40978700200000001" green="0.15107095200000001" blue="0.41089175439999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Get Direction">
+                                                    <attributes>
+                                                        <font key="NSFont" size="20" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="getDirectionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kmp-Jx-Lrp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="n4s-T6-2tM" secondAttribute="trailing" id="1MK-u2-Tmf"/>
+                                    <constraint firstItem="lBP-o6-Yx5" firstAttribute="leading" secondItem="odv-9L-eRo" secondAttribute="leading" id="2qt-4a-lZ1"/>
+                                    <constraint firstItem="n4s-T6-2tM" firstAttribute="leading" secondItem="odv-9L-eRo" secondAttribute="leading" id="3YS-iM-5MJ"/>
+                                    <constraint firstItem="WYH-mO-tmk" firstAttribute="leading" secondItem="odv-9L-eRo" secondAttribute="leading" id="Afs-Kp-SSE"/>
+                                    <constraint firstItem="fOt-Uy-iej" firstAttribute="leading" secondItem="odv-9L-eRo" secondAttribute="leading" id="H6J-Ap-H7m"/>
+                                    <constraint firstAttribute="trailing" secondItem="fOt-Uy-iej" secondAttribute="trailing" id="Psa-xC-rxj"/>
+                                    <constraint firstAttribute="trailing" secondItem="szt-yc-xin" secondAttribute="trailing" id="RUD-GQ-jpB"/>
+                                    <constraint firstAttribute="trailing" secondItem="WYH-mO-tmk" secondAttribute="trailing" id="bfV-jM-aV5"/>
+                                    <constraint firstAttribute="trailing" secondItem="lBP-o6-Yx5" secondAttribute="trailing" id="kpI-4f-Qky"/>
+                                    <constraint firstItem="szt-yc-xin" firstAttribute="leading" secondItem="odv-9L-eRo" secondAttribute="leading" id="voc-uI-hjl"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="odv-9L-eRo" secondAttribute="trailing" id="5Cv-Zp-ukK"/>
+                            <constraint firstItem="odv-9L-eRo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9pZ-KF-wgM"/>
+                            <constraint firstItem="odv-9L-eRo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Sko-BP-Drl"/>
+                            <constraint firstItem="odv-9L-eRo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yaa-qQ-Oyd"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-452" y="-41"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetRegionVC" customModule="Map" customModuleProvider="target">
+            <connections>
+                <outlet property="mapView" destination="gP2-rY-MFk" id="jkA-tA-nTY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gP2-rY-MFk">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6r-UJ-g4f">
+                    <rect key="frame" x="390" y="54" width="24" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="WGX-48-MVX"/>
+                        <constraint firstAttribute="width" constant="24" id="f7i-Si-vt8"/>
+                    </constraints>
+                    <color key="tintColor" red="0.49865566490000002" green="0.18383302949999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="arrow.down.app.fill" catalog="system"/>
+                    <connections>
+                        <action selector="dismissMap:" destination="-1" eventType="touchUpInside" id="XhN-51-EoZ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gP2-rY-MFk" secondAttribute="trailing" id="43t-e7-mfE"/>
+                <constraint firstItem="gP2-rY-MFk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8if-fS-YzQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="M6r-UJ-g4f" secondAttribute="trailing" id="Rht-an-fEn"/>
+                <constraint firstAttribute="bottom" secondItem="gP2-rY-MFk" secondAttribute="bottom" id="jVJ-3s-Hf7"/>
+                <constraint firstItem="M6r-UJ-g4f" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="tgg-HN-xIU"/>
+                <constraint firstItem="gP2-rY-MFk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xfG-M5-W5a"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="61.607142857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.down.app.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
